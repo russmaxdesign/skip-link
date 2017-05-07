@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stylign a skip link</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- skip to content link -->
+  <div class="skip-link">
+    <a href="#content">Skip to content (Press enter)</a>
+  </div>
+
+  <div class="container">
+    <h1>Styling a skip link</h1>
+    <p><a href="https://github.com/russmaxdesign/skip-link">Github Page</a></p>
+    <p>A quick demo showing how to style a skip link.</p>
+
+    <div id="content">
+      <p><a href="#"> A link inside the content area</a></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae laborum, accusamus impedit quis odio, quisquam molestiae? Voluptatem consectetur rerum iste esse corporis eius corrupti laborum dolorem voluptates, saepe molestias explicabo.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae laborum, accusamus impedit quis odio, quisquam molestiae? Voluptatem consectetur rerum iste esse corporis eius corrupti laborum dolorem voluptates, saepe molestias explicabo.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae laborum, accusamus impedit quis odio, quisquam molestiae? Voluptatem consectetur rerum iste esse corporis eius corrupti laborum dolorem voluptates, saepe molestias explicabo.</p>
+    </div>
+    <hr>
+
+    <h2>Code</h2>
+    <figure>
+      <figcaption class="markup-heading">Markup</figcaption>
+  <pre><code class="language-markup">&lt;div class="skip-link"&gt;
+  &lt;a href="#content"&gt;Skip to content (Press enter)&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </figure>
+
+    <figure>
+      <figcaption class="markup-heading">SCSS</figcaption>
+<pre><code class="language-scss">.skip-link a {
+  position: absolute;
+  z-index: 2;
+  left: -1000px;
+  padding: .5em;
+  color: white;
+  background: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.skip-link a:active,
+.skip-link a:focus,
+.skip-link a:hover {
+  top: 0;
+  left: 0;
+  display: inline;
+}
+
+:target {
+  background: yellow;
+}
+</code></pre>
+    </figure>
+    <hr>
+
+    <p style="margin-top: 2em;"><a href="https://github.com/russmaxdesign/skip-link">Github Page</a></p>
+  </div>
+
+<script src="assets/js/prism.js"></script>
+</body>
+</html>
